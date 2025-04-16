@@ -10,7 +10,7 @@ export default function LandingPage() {
         <>
             <div className="container mx-auto my-4 lg:px-72 w-[90vw]">
                 {/* NAVIGATION */}
-                <nav className="w-full bg-white shadow rounded-sm px-6 py-4 mb-8 flex justify-between items-center sticky top-0 z-50">
+                <nav className="w-full bg-white shadow rounded-sm px-6 py-4 mb-6 flex justify-between items-center sticky top-0 z-50">
                     <Link href="#projects" className="hover:text-blue-600 transition">Projects</Link>
                     <Link href="#tech" className="hover:text-blue-600 transition">Tech Stack</Link>
                     <Link href="#about" className="hover:text-blue-600 transition">About</Link>
