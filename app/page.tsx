@@ -34,6 +34,7 @@ export default function LandingPage() {
                     <p>I'm a young, passionate developer who doesn't fear a challenge. I don't limit myself to one tech-stack and keep myself up to date by working on side-projects in my free time.</p>
                 </div>
 
+                <h2 className="font-bold text-xl mb-2">💼 What have I worked on?</h2>
                 <Carousel />
             </div>
         </>
