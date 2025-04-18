@@ -1,22 +1,24 @@
 import Carousel from "@/components/carousel";
 import Navbar from "@/components/navbar";
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { testimonials } from "./assets/testimonials";
 
 export default function LandingPage() {
 
     const skills = [
-        { path: 'css.svg', name: 'CSS' },
-        { path: 'docker.svg', name: 'Docker' },
-        { path: 'googlecloud.svg', name: 'Google Cloud' },
-        { path: 'hibernate.svg', name: 'Hibernate' },
-        { path: 'html5.svg', name: 'HTML5' },
-        { path: 'nextdotjs.svg', name: 'Next.js' },
-        { path: 'nodedotjs.svg', name: 'Node.js' },
-        { path: 'postgresql.svg', name: 'PostgreSQL' },
-        { path: 'python.svg', name: 'Python' },
-        { path: 'react.svg', name: 'React' },
-        { path: 'springboot.svg', name: 'Spring Boot' },
-        { path: 'typescript.svg', name: 'TypeScript' },
-        { path: 'vercel.svg', name: 'Vercel' },
+        { path: 'icons/css.svg', name: 'CSS' },
+        { path: 'icons/docker.svg', name: 'Docker' },
+        { path: 'icons/googlecloud.svg', name: 'Google Cloud' },
+        { path: 'icons/hibernate.svg', name: 'Hibernate' },
+        { path: 'icons/html5.svg', name: 'HTML5' },
+        { path: 'icons/nextdotjs.svg', name: 'Next.js' },
+        { path: 'icons/nodedotjs.svg', name: 'Node.js' },
+        { path: 'icons/postgresql.svg', name: 'PostgreSQL' },
+        { path: 'icons/python.svg', name: 'Python' },
+        { path: 'icons/react.svg', name: 'React' },
+        { path: 'icons/springboot.svg', name: 'Spring Boot' },
+        { path: 'icons/typescript.svg', name: 'TypeScript' },
+        { path: 'icons/vercel.svg', name: 'Vercel' },
     ];
 
     return (
@@ -63,6 +65,9 @@ export default function LandingPage() {
                         ))}
                     </div>
                 </div>
+
+                <AnimatedTestimonials testimonials={testimonials} />
+
             </div>
         </>
     )
