@@ -66,7 +66,11 @@ export default function LandingPage() {
                     </div>
                 </div>
 
+                <h2 className="font-bold text-xl">💭 What do people think about me?</h2>
                 <AnimatedTestimonials testimonials={testimonials} />
+
+                <h2 className="font-bold text-xl">🤝 Want me on your team?</h2>
+                <p className="font-extralight">Reach out to me!</p>
 
             </div>
         </>
