@@ -9,6 +9,6 @@ export const testimonials = [
         quote: 'Een goede werknemer all around.',
         name: 'Robbe Decroo',
         designation: 'Werkloos :(',
-        src: 'testimonials/egwin-panenco.png'
+        src: 'https://avatars.githubusercontent.com/u/205773967?v=4'
     }
 ]
