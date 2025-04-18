@@ -18,7 +18,7 @@ export default function Carousel() {
     return (
         <section className="embla">
             <div className="embla__viewport" ref={emblaRef}>
-                <div className="embla__container">
+                <div className="embla__container hover:cursor-pointer">
                     <div className="embla__slide"><SlideItem /></div>
                     <div className="embla__slide"><SlideItem /></div>
                     <div className="embla__slide"><SlideItem /></div>

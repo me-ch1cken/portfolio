@@ -1,4 +1,5 @@
 import Carousel from "@/components/carousel";
+import Navbar from "@/components/navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import useEmblaCarousel from "embla-carousel-react";
 import { Github, Linkedin, Mail } from "lucide-react";
@@ -10,12 +11,7 @@ export default function LandingPage() {
         <>
             <div className="container mx-auto my-4 lg:px-72 w-[90vw]">
                 {/* NAVIGATION */}
-                <nav className="w-full bg-white shadow rounded-sm px-6 py-4 mb-6 flex justify-between items-center sticky top-0 z-50">
-                    <Link href="#projects" className="hover:text-blue-600 transition">Projects</Link>
-                    <Link href="#tech" className="hover:text-blue-600 transition">Tech Stack</Link>
-                    <Link href="#about" className="hover:text-blue-600 transition">About</Link>
-                    <Link href="#contact" className="hover:text-blue-600 transition">Contact</Link>
-                </nav>
+                <Navbar />
                 {/* CONTENT */}
                 <div className="flex items-center space-x-4 my-4">
                     <img
@@ -36,6 +32,10 @@ export default function LandingPage() {
 
                 <h2 className="font-bold text-xl mb-2">💼 What have I worked on?</h2>
                 <Carousel />
+
+                <div className="my-4">
+                    <h2 className="font-bold text-xl">💻 What have I worked with before?</h2>
+                </div>
             </div>
         </>
     )
