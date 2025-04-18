@@ -2,6 +2,7 @@ import Carousel from "@/components/carousel";
 import Navbar from "@/components/navbar";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { testimonials } from "./assets/testimonials";
+import ContactForm from "@/components/contact-form";
 
 export default function LandingPage() {
 
@@ -69,9 +70,11 @@ export default function LandingPage() {
                 <h2 className="font-bold text-xl">💭 What do people think about me?</h2>
                 <AnimatedTestimonials testimonials={testimonials} />
 
-                <h2 className="font-bold text-xl">🤝 Want me on your team?</h2>
-                <p className="font-extralight">Reach out to me!</p>
-
+                <div className="my-4">
+                    <h2 className="font-bold text-xl">🤝 Want me on your team?</h2>
+                    <p className="font-extralight">Reach out to me!</p>
+                    <ContactForm />
+                </div>
             </div>
         </>
     )
