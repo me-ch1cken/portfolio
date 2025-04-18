@@ -1,11 +1,23 @@
 import Carousel from "@/components/carousel";
 import Navbar from "@/components/navbar";
-import { Card, CardContent } from "@/components/ui/card";
-import useEmblaCarousel from "embla-carousel-react";
-import { Github, Linkedin, Mail } from "lucide-react";
-import Link from "next/link";
 
 export default function LandingPage() {
+
+    const skills = [
+        { path: 'css.svg', name: 'CSS' },
+        { path: 'docker.svg', name: 'Docker' },
+        { path: 'googlecloud.svg', name: 'Google Cloud' },
+        { path: 'hibernate.svg', name: 'Hibernate' },
+        { path: 'html5.svg', name: 'HTML5' },
+        { path: 'nextdotjs.svg', name: 'Next.js' },
+        { path: 'nodedotjs.svg', name: 'Node.js' },
+        { path: 'postgresql.svg', name: 'PostgreSQL' },
+        { path: 'python.svg', name: 'Python' },
+        { path: 'react.svg', name: 'React' },
+        { path: 'springboot.svg', name: 'Spring Boot' },
+        { path: 'typescript.svg', name: 'TypeScript' },
+        { path: 'vercel.svg', name: 'Vercel' },
+    ];
 
     return (
         <>
@@ -26,7 +38,7 @@ export default function LandingPage() {
                 </div>
 
                 <div className="my-4">
-                    <h2 className="font-bold text-xl">🧑‍💻 About me</h2>
+                    <h2 className="font-bold text-xl mb-2">🧑‍💻 About me</h2>
                     <p>I'm a young, passionate developer who doesn't fear a challenge. I don't limit myself to one tech-stack and keep myself up to date by working on side-projects in my free time.</p>
                 </div>
 
@@ -34,7 +46,22 @@ export default function LandingPage() {
                 <Carousel />
 
                 <div className="my-4">
-                    <h2 className="font-bold text-xl">💻 What have I worked with before?</h2>
+                    <h2 className="font-bold text-xl mb-2">💻 What have I worked with before?</h2>
+                    <div className="flex justify-start md:justify-start overflow-x-auto gap-3 whitespace-nowrap py-2">
+                        {skills.map((skill, index) => (
+                            <div
+                                key={index}
+                                className="flex flex-col items-center first:ml-0 last:mr-0 me-2"
+                            >
+                                <img
+                                    src={skill.path}
+                                    alt={skill.name}
+                                    className="w-8 h-8 mb-1"
+                                />
+                                <span className="text-xs text-center">{skill.name}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </>
