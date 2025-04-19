@@ -3,7 +3,7 @@ import Navbar from "@/components/navbar";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { testimonials } from "./assets/testimonials";
 import ContactForm from "@/components/contact-form";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export default function LandingPage() {
 
@@ -31,7 +31,7 @@ export default function LandingPage() {
                 {/* CONTENT */}
                 <div className="flex items-center space-x-4 my-4">
                     <img
-                        src="https://via.placeholder.com/80"
+                        src="robbe-cv.jpeg"
                         alt="Robbe"
                         className="w-20 h-20 rounded-full border-2 border-gray-300"
                     />
@@ -80,17 +80,11 @@ export default function LandingPage() {
 
             <footer className="bg-gray-200 py-6 mt-8">
                 <div className="container mx-auto w-[90vw] lg:px-72 flex flex-col items-center justify-center gap-2 text-gray-600">
-                    <div className="flex gap-4">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <Facebook className="w-5 h-5 hover:text-blue-600 transition" />
+                    <div className="flex gap-2">
+                        <a href="https://github.com/me-ch1cken" target="_blank" rel="noopener noreferrer">
+                            <Github className="w-5 h-5 hover:text-gray-900 transition" />
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                            <Twitter className="w-5 h-5 hover:text-blue-400 transition" />
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <Instagram className="w-5 h-5 hover:text-pink-500 transition" />
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/robbe-decroo/" target="_blank" rel="noopener noreferrer">
                             <Linkedin className="w-5 h-5 hover:text-blue-700 transition" />
                         </a>
                     </div>

@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
                     <Tooltip>
                         <TooltipTrigger asChild>
                             <a
-                                href="mailto:your.email@example.com"
+                                href="mailto:rdecroo24@gmail.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 hover:text-black"
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
                     <Tooltip>
                         <TooltipTrigger asChild>
                             <a
-                                href="https://github.com/jouw-gebruikersnaam"
+                                href="https://github.com/me-ch1cken"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 hover:text-black"
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
                     <Tooltip>
                         <TooltipTrigger asChild>
                             <a
-                                href="https://www.linkedin.com/in/jouw-linkedin/"
+                                href="https://www.linkedin.com/in/robbe-decroo/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 hover:text-blue-700"
