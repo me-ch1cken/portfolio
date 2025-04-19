@@ -6,6 +6,7 @@ import { z } from 'zod';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { Button } from "./ui/button";
 
 const formSchema = z.object({
     email: z.string().min(1).max(100),
@@ -63,6 +64,7 @@ export default function ContactForm() {
                         <FormMessage />
                     </FormItem>
                 )} />
+                <Button className="cursor-pointer">Get in touch!</Button>
             </form>
         </Form>
     );

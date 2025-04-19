@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { testimonials } from "./assets/testimonials";
 import ContactForm from "@/components/contact-form";
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function LandingPage() {
 
@@ -76,6 +77,26 @@ export default function LandingPage() {
                     <ContactForm />
                 </div>
             </div>
+
+            <footer className="bg-gray-200 py-6 mt-8">
+                <div className="container mx-auto w-[90vw] lg:px-72 flex flex-col items-center justify-center gap-2 text-gray-600">
+                    <div className="flex gap-4">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <Facebook className="w-5 h-5 hover:text-blue-600 transition" />
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                            <Twitter className="w-5 h-5 hover:text-blue-400 transition" />
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <Instagram className="w-5 h-5 hover:text-pink-500 transition" />
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <Linkedin className="w-5 h-5 hover:text-blue-700 transition" />
+                        </a>
+                    </div>
+                    <p className="text-sm font-extralight">Designed & developed by Robbe Decroo</p>
+                </div>
+            </footer>
         </>
     )
 }
