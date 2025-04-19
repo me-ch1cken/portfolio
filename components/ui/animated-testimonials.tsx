@@ -40,7 +40,7 @@ export const AnimatedTestimonials = ({
   }, [autoplay]);
 
   const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
+    return Math.floor(0.21 * 21) - 10;
   };
   return (
     <div className="mx-auto max-w-sm px-4 py-4 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
