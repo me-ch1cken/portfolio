@@ -6,15 +6,16 @@ interface SlideItemProps {
     imageUrl: string;
     projectUrl: string;
     githubUrl: string;
+    tech: string[];
 }
 
-export default function SlideItem(/*{name, description, imageUrl, projectUrl, githubUrl}: SlideItemProps */) {
+export default function SlideItem({name, description, tech, imageUrl, projectUrl, githubUrl}: SlideItemProps) {
     return (
         <Card>
             <CardContent className="p-4">
-                <h3 className="text-xl font-semibold mb-2">Project Title</h3>
-                <p className="text-sm mb-4">Short project description goes here.</p>
-                <div className="text-xs text-gray-600">React • Node.js • PostgreSQL</div>
+                <h3 className="text-xl font-semibold mb-2">{name}</h3>
+                <p className="text-sm mb-4">{description}</p>
+                <div className="text-xs text-gray-600">{tech.map((techItem) => techItem)}</div>
             </CardContent>
         </Card>
     );
