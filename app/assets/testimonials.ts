@@ -6,9 +6,9 @@ export const testimonials = [
         src: 'testimonials/egwin-panenco.png'
     },
     {
-        quote: 'Een goede werknemer all around.',
-        name: 'Robbe Decroo',
-        designation: 'Werkloos :(',
-        src: 'https://avatars.githubusercontent.com/u/205773967?v=4'
+        quote: 'Robbe was one of my interns, and perhaps the best I’ve ever had. He demonstrated broad knowledge and wasn’t afraid to learn new things. Robbe not only writes clear and efficient code, but also takes the time to understand the bigger picture. As a result, he delivers a final product that is both functional and user-friendly. His dedication, professionalism, and ability to communicate technical concepts clearly make him an exceptionally valuable asset to any team. I wouldn’t hesitate for a second to work with him again if the opportunity arises.',
+        name: 'Pieter Dugardyn',
+        designation: 'Developer at Spot Group',
+        src: 'testimonials/pieter-spot.png'
     }
 ]
