@@ -19,7 +19,7 @@ export default function Carousel() {
         <section className="embla">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container hover:cursor-pointer">
-                    <div className="embla__slide"><SlideItem name="project 1" description="first project" imageUrl="/" projectUrl="/" githubUrl="/" tech={['react', 'node.js']} /></div>
+                    <div className="embla__slide"><SlideItem name="project 1" description="first project" imageUrl="projects/mynance.png" projectUrl="/" githubUrl="/" tech={['react', 'node.js']} /></div>
                     <div className="embla__slide"><SlideItem name="project 1" description="first project" imageUrl="/" projectUrl="/" githubUrl="/" tech={['react', 'node.js']} /></div>
                     <div className="embla__slide"><SlideItem name="project 1" description="first project" imageUrl="/" projectUrl="/" githubUrl="/" tech={['react', 'node.js']} /></div>
                 </div>
