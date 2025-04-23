@@ -43,7 +43,7 @@ export default function LandingPage() {
 
                 <div className="my-4">
                     <h2 className="font-bold text-xl mb-2">🧑‍💻 About me</h2>
-                    <p>I'm a young, passionate developer who doesn't fear a challenge. I don't limit myself to one tech-stack and keep myself up to date by working on side-projects in my free time.</p>
+                    <p>I&apos;m a young, passionate developer who doesn&apos;t fear a challenge. I don&apos;t limit myself to one tech-stack and keep myself up to date by working on side-projects in my free time.</p>
                 </div>
 
                 <h2 className="font-bold text-xl mb-2">💼 What have I worked on?</h2>
