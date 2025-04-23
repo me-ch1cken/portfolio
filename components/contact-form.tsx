@@ -33,7 +33,7 @@ export default function ContactForm() {
         setSubmitStatus('idle');
         
         try {
-            const response = await fetch('https://portfolio-serverless-rose.vercel.app/api/contact', {
+            const response = await fetch(process.env.CONTACT_URL!, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
