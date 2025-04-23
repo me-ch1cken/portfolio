@@ -3,6 +3,7 @@
 import useEmblaCarousel from "embla-carousel-react";
 import SlideItem from "./slide-item";
 import { NextButton, PrevButton, usePrevNextButtons } from "./carousel-buttons";
+import { projects } from "@/app/assets/projects";
 
 export default function Carousel() {
 
@@ -19,9 +20,9 @@ export default function Carousel() {
         <section className="embla">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container hover:cursor-pointer">
-                    <div className="embla__slide"><SlideItem name="project 1" description="first project" imageUrl="projects/mynance.png" projectUrl="/" githubUrl="/" tech={['react', 'node.js']} /></div>
-                    <div className="embla__slide"><SlideItem name="project 1" description="first project" imageUrl="/" projectUrl="/" githubUrl="/" tech={['react', 'node.js']} /></div>
-                    <div className="embla__slide"><SlideItem name="project 1" description="first project" imageUrl="/" projectUrl="/" githubUrl="/" tech={['react', 'node.js']} /></div>
+                    {projects.map((project) => (
+                        <div className="embla__slide" key={project.name}><SlideItem name={project.name} description={project.description} imageUrl={project.imageUrl} projectUrl={project.projectUrl} githubUrl={project.githubUrl} tech={project.tech} /></div>
+                    ))}
                 </div>
             </div>
     

@@ -20,8 +20,9 @@ export default function SlideItem({ name, description, tech, imageUrl, projectUr
             <div className="absolute inset-0 ps-4 pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-lg font-semibold">
                 <h5>{name}</h5>
                 <p className="text-white font-extralight text-sm">{description}</p>
-                <a className="mt-2 me-2 text-blue-300 text-sm underline cursor-pointer hover:text-blue-400" href={projectUrl}>View project</a>-
-                <a className="ms-2 text-sm underline text-blue-300 cursor-pointer hover:text-blue-400" href={githubUrl}>View source code</a>
+                <a className="mt-2 me-2 text-blue-300 text-sm underline cursor-pointer hover:text-blue-400" href={projectUrl} target="_blank">Demo</a>-
+                <a className="ms-2 text-sm underline text-blue-300 cursor-pointer hover:text-blue-400" href={githubUrl} target="_blank">Source code</a>
+                <p className="font-extralight text-xs mt-2">{tech.map((t, i) => i == tech.length - 1 ? t : t + ' - ')}</p>
             </div>
         </div>
     );
