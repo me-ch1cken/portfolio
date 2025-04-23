@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import { Card, CardContent } from "./ui/card";
 
 interface SlideItemProps {
     name: string;
@@ -29,8 +28,6 @@ export default function SlideItem({ name, description, tech, imageUrl, projectUr
         }
     };
 
-    const isOverlayVisible = isMobile ? showOverlay : false;
-
     return (
         <div
             className="relative w-64 h-40 group overflow-hidden rounded-xl"
@@ -48,7 +45,7 @@ export default function SlideItem({ name, description, tech, imageUrl, projectUr
 
             <div
                 className={`
-                    absolute inset-0 ps-4 pt-2 text-white text-lg font-semibold
+                    absolute inset-0 px-4 py-2 text-white text-lg font-semibold
                     transition-opacity duration-300
                     ${isMobile ? (showOverlay ? 'opacity-100' : 'opacity-0') : 'opacity-0 group-hover:opacity-100'}
                 `}
