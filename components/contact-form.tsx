@@ -33,7 +33,7 @@ export default function ContactForm() {
         setSubmitStatus('idle');
         
         try {
-            const response = await fetch(process.env.CONTACT_URL!, {
+            const response = await fetch(process.env.NEXT_PUBLIC_CONTACT_URL!, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
