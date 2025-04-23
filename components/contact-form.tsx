@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
+import { useState } from "react";
 
 const formSchema = z.object({
     email: z.string().min(1).max(100),
@@ -15,6 +16,9 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -24,8 +28,31 @@ export default function ContactForm() {
         }
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
+        
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to send message');
+            }
+
+            setSubmitStatus('success');
+            form.reset();
+        } catch (error) {
+            console.error('Error sending message:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     return (
@@ -64,7 +91,21 @@ export default function ContactForm() {
                         <FormMessage />
                     </FormItem>
                 )} />
-                <Button className="cursor-pointer">Get in touch!</Button>
+                
+                {submitStatus === 'success' && (
+                    <p className="text-green-600">I have received your message and will get back to you as soon as possible! 🤗</p>
+                )}
+                {submitStatus === 'error' && (
+                    <p className="text-red-600">Something went wrong, try again later.</p>
+                )}
+                
+                <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="cursor-pointer"
+                >
+                    {isSubmitting ? 'Sending...' : 'Get in touch!'}
+                </Button>
             </form>
         </Form>
     );
