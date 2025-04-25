@@ -4,7 +4,6 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { testimonials } from "./assets/testimonials";
 import ContactForm from "@/components/contact-form";
 import { Github, Linkedin } from "lucide-react";
-import Head from "next/head";
 
 export default function LandingPage() {
 
