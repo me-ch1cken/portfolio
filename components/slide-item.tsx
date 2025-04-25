@@ -52,16 +52,20 @@ export default function SlideItem({ name, description, tech, imageUrl, projectUr
             >
                 <h5>{name}</h5>
                 <p className="text-white font-extralight text-sm">{description}</p>
+                {projectUrl ? (
+                    <>
+                        <a
+                            className="mt-2 me-2 text-blue-300 text-sm underline cursor-pointer hover:text-blue-400"
+                            href={projectUrl}
+                            target="_blank"
+                        >
+                            Demo
+                        </a>
+                        -
+                    </> 
+                ) : null}
                 <a
-                    className="mt-2 me-2 text-blue-300 text-sm underline cursor-pointer hover:text-blue-400"
-                    href={projectUrl}
-                    target="_blank"
-                >
-                    Demo
-                </a>
-                -
-                <a
-                    className="ms-2 text-sm underline text-blue-300 cursor-pointer hover:text-blue-400"
+                    className={`${projectUrl ? 'ms-2' : ''} text-sm underline text-blue-300 cursor-pointer hover:text-blue-400`}
                     href={githubUrl}
                     target="_blank"
                 >
