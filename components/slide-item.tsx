@@ -45,7 +45,7 @@ export default function SlideItem({ name, description, tech, imageUrl, projectUr
 
             <div
                 className={`
-                    absolute inset-0 px-4 py-2 text-white text-lg font-semibold
+                    absolute inset-0 px-4 py-2 text-white text-lg font-semibold overflow-y-scroll no-scrollbar
                     transition-opacity duration-300
                     ${isMobile ? (showOverlay ? 'opacity-100' : 'opacity-0') : 'opacity-0 group-hover:opacity-100'}
                 `}

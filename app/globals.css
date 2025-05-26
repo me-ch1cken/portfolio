@@ -248,3 +248,7 @@
 .embla__dot--selected:after {
     box-shadow: inset 0 0 0 0.2rem var(--text-body);
 }
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
